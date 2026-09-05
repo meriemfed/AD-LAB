@@ -28,6 +28,7 @@ follow-up BloodHound scan.
 | `configs/create-groups.ps1` | PowerShell script — group creation and membership |
 | `configs/bloodhound-setup.md` | BloodHound CE + SharpHound install and collection notes |
 | `references/sources.md` | Tools and documentation referenced while building the lab |
+| `diagrams/ad-lab.drawio.png` | Architecture of the AD lab |
 | `screenshots/` | Evidence organized by lab phase (network setup through remediation) |
 
 ## Environment
@@ -49,5 +50,4 @@ follow-up BloodHound scan.
 Full privilege escalation audit using BloodHound, covering three
 different discovery techniques (automated path query, AD hygiene/nested
 group check, and account hygiene query) to find risks that a single
-method alone would have missed. See `report/attack-path-analysis.md`
-and `report/remediation-report.md` for details.
+method alone would have missed. 

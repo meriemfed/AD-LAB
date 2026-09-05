@@ -15,24 +15,14 @@ docker compose pull
 docker compose up
 ```
 
-Retrieved the auto-generated admin password from container logs:
 
-```bash
-docker compose logs | grep "Initial Password Set To"
-```
-
-Logged in at `http://localhost:8080/ui/login`, set a new admin password
-on first login.
-
-**Evidence:** `screenshots/09-bloodhound-installed.png`
 
 ## 2. SharpHound collector setup (on CLIENT01)
 
 Downloaded SharpHound from the official SpecterOps GitHub releases page,
 extracted to `C:\Tools\SharpHound\`.
 
-Windows Defender flagged the executable as a hacktool (expected — SharpHound
-is a legitimate AD reconnaissance tool used maliciously and defensively).
+Windows Defender flagged the executable as a hacktool (expected).
 Added a local exclusion scoped to this folder only, on this isolated lab
 VM only:
 
@@ -52,7 +42,7 @@ cd C:\Tools\SharpHound
 Output: a timestamped zip file containing JSON data on users, groups,
 computers, sessions, and ACLs across the domain.
 
-**Evidence:** `screenshots/10-sharphound-collection.png`
+
 
 ## 4. Data ingestion
 
